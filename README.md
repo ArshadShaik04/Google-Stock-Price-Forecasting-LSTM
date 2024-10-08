@@ -7,6 +7,7 @@ This project involves building a machine learning model to predict Google's stoc
 The goal of this project is to predict Google's stock closing prices using a deep learning approach. The model is built with a hybrid of LSTM and GRU layers, which are well-suited for handling sequential data such as stock prices. We also perform hyperparameter tuning using Keras Tuner to optimize the performance of the model.
 
 ### Key Features of the Project:
+
 - **Data Preprocessing**: Historical stock data including open, close, high, low, and volume were used. Additional features such as moving averages, volatility, daily returns, and price range were added.
 - **Feature Engineering**: Added important financial indicators such as 20-day and 50-day moving averages, volatility, and 200-day moving averages to enhance model performance.
 - **Model Architecture**: The model consists of a combination of Bidirectional LSTM and GRU layers, with dropout layers added to prevent overfitting.
@@ -16,12 +17,14 @@ The goal of this project is to predict Google's stock closing prices using a dee
 ## Dataset
 
 The dataset used for this project includes historical stock prices of Google. The features used include:
+
 - **Date**: The date of the stock data.
 - **Open, Close, High, Low**: The respective stock prices.
 - **Volume**: The trading volume on that particular day.
 
 Additional derived features:
-- **MA_20, MA_50, MA_200**: 20-day, 50-day, and 200-day moving averages.
+
+- **MA\_20, MA\_50, MA\_200**: 20-day, 50-day, and 200-day moving averages.
 - **Volatility**: 20-day rolling standard deviation of the closing price.
 - **Daily Return**: Percentage change in closing price.
 - **Price Range**: Difference between the high and low prices.
@@ -29,6 +32,7 @@ Additional derived features:
 ## Model Architecture
 
 The model was built using **Keras** and includes the following:
+
 - **Bidirectional LSTM Layer**: Captures both past and future context in the sequence.
 - **GRU Layer**: Captures relevant patterns in sequential data while using fewer computational resources compared to LSTM.
 - **Dropout Layers**: Prevents overfitting by randomly setting a fraction of input units to zero during training.
@@ -37,6 +41,7 @@ The model was built using **Keras** and includes the following:
 ## Hyperparameter Tuning
 
 **Keras Tuner** was used for hyperparameter tuning, specifically using **RandomSearch**. The parameters tuned include:
+
 - **Number of LSTM and GRU Units**
 - **Dropout Rates**
 - **Learning Rate**
@@ -53,9 +58,31 @@ These values reflect a significant improvement over initial runs, showing that t
 ## Visualizations
 
 1. **Training and Validation Loss**: Plotted to visualize model performance during training.
-2. **Actual vs. Predicted Prices**: A comparison of the predicted prices with the actual stock prices.
-3. **Residual Plot**: Shows the difference between actual and predicted prices, providing insight into prediction errors.
+   ![Training and Validation Loss](Visualization%20Plots/Training%20and%20Validation%20Loss.png)
 
+2. **Training and Validation MAE**: Plotted to visualize model MAE during training.
+   ![Training and Validation MAE](Visualization%20Plots/Training%20and%20Validation%20MAE.png)
+
+3. **Actual vs. Predicted Prices**: A comparison of the predicted prices with the actual stock prices.
+   ![Actual vs Predicted Prices](Visualization%20Plots/Actual%20vs.%20Predicted%20Prices.png)
+
+4. **Residual Plot**: Shows the difference between actual and predicted prices, providing insight into prediction errors.
+   ![Residual Plot](Visualization%20Plots/Residual%20Plot.png)
+
+## How to Run the Project
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/google-stock-price-prediction.git
+   ```
+2. Install the required dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Run the Jupyter Notebook or Python script to train the model:
+   ```sh
+   jupyter notebook google_stock_prediction.ipynb
+   ```
 
 ## Requirements
 
@@ -74,5 +101,4 @@ These values reflect a significant improvement over initial runs, showing that t
 ## Conclusion
 
 The hybrid LSTM-GRU model performs well in capturing the trends in Google's stock price, and hyperparameter tuning played a crucial role in improving its performance. The model can be further enhanced by incorporating additional data sources and more advanced deep learning techniques.
-
 
