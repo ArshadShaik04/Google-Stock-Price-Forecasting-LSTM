@@ -69,21 +69,6 @@ These values reflect a significant improvement over initial runs, showing that t
 4. **Residual Plot**: Shows the difference between actual and predicted prices, providing insight into prediction errors.
    ![Residual Plot](Visualization%20Plots/Residual%20Plot.png)
 
-## How to Run the Project
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/google-stock-price-prediction.git
-   ```
-2. Install the required dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Run the Jupyter Notebook or Python script to train the model:
-   ```sh
-   jupyter notebook google_stock_prediction.ipynb
-   ```
-
 ## Requirements
 
 - Python 3.7+
